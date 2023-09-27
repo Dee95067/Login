@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: gray;
+        }
+        .container{
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .apply-box{
+            max-width: 600px;
+            padding: 20px;
+            background-color: white;
+            margin: 0 auto;
+            margin-top: 50px;
+            box-shadow: 4px 3px 5px rgba(1, 1, 1, 0.1);
+            border-radius:10px ;
+        }
+        .title-small{
+            font-size: 21px;
+        }
+        .form-container{
+            display:grid;
+            grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+            gap: 20px;
+        }
+        .form-control{
+            display: flex;
+            flex-direction:column;
+        }
+        label{
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+        input,
+        select,
+        textarea{
+            padding:6px 10px ;
+            border: 1px solid rgb(152, 9, 42);
+            border-radius:4px;
+            font-size: 15px;
+        }
+        input:focus{
+            outline-color: red;
+        }
+        .button-container{
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 20px;
+
+        }
+        button{
+            background-color: #ff4400;
+            border: transparent solid 2px;
+            padding: 5px 10px;
+            border-radius: 6px;
+            color: cornsilk;
+            transition: 0.3s ease-in;
+        }
+        button:hover{
+            background-color: gray;
+            border: 2px solid red;
+            color: black;
+            transition: 0.3s ease-in-out;
+            cursor: pointer;
+        }
+        .textarea-control{
+            grid-column: 1/span 2;
+        }
+        .textarea-control textarea{
+            width: 100%;
+        }
+        @media(max-width:412px){
+            .textarea-control{
+            grid-column: 1/span 1;
+        }
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="cantainer">
+        <div class="apply-box">
+        <h1>Job Application
+        <sppn class="title-small">(Web)</sppn>
+        </h1>
+        <form action="">
+            <div class="form-container">
+                <div class="form-control">
+                    <label for="first-name">
+                        First Name
+                    </label>
+                    <input id="first-name"
+                     name="first-name" 
+                     placeholder="Enter First Name">
+                </div>
+
+                <div class="form-control">
+                    <label for="last-name">
+                        Last Name
+                    </label>
+                    <input id="last-name"
+                     name="last-name" 
+                     placeholder="Enter Last Name">
+                </div>
+                
+                <div class="form-control">
+                    <label for="email">
+                        Email
+                    </label>
+                    <input id="email"
+                     name="email" 
+                     placeholder="Enter Your Email">
+                </div>
+
+                <div class="form-control">
+                    <label for="first-name">
+                        Job Roll
+                    </label>
+                    <select>
+                        <option value="">Select job Roll</option>
+                        <option value="java">Java</option>
+                        <option value="javaSript">JavaScript</option>
+                        <option value="c">C</option>
+                        <option value="html">HTML</option>
+                        <option value="css">CSS</option>
+                        <option value="c++">C++</option>
+                        <option value="php">PHP</option>
+                    </select>
+                </div>
+                 <div class="textarea-control">
+                    <label for="address">
+                        Address
+                    </label>
+                    <textarea id="address" 
+                             name="address"
+                             rows="4" 
+                             cols="50"
+                             placeholder="Enter Your Address">
+                    </textarea>
+                </div> 
+
+                <div class="form-control">
+                    <label for="city">
+                        City
+                    </label>
+                    <input id="city"
+                     name="city" 
+                     placeholder="Enter Your City">
+                </div>
+
+                <div class="form-control">
+                    <label for="number">
+                        Pincode
+                    </label>
+                    <input id="pincode"
+                     type="number" 
+                     placeholder="Enter Your Pincode">
+                </div>
+
+                <div class="form-control">
+                    <label for="date">
+                        Date
+                    </label>
+                    <input id="date"
+                     type="date">
+                </div>
+
+                <div class="form-control">
+                    <label for="upload cv">
+                        Upload Your CV
+                    </label>
+                    <input id="upload cv"
+                     type="file" 
+                     placeholder="Upload Your CV">
+                </div>
+            </div>
+            <div class="button-container">
+                <button id="submit">Apply Now</button>
+            </div>
+        </form>
+        </div>
+    </div>
+</body>
+</html>
